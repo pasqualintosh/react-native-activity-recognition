@@ -1,27 +1,25 @@
 {
-  "_from": "react-native-activity-recognition",
+  "_from": "git+https://github.com/ifielder/react-native-activity-recognition.git",
   "_id": "react-native-activity-recognition@3.2.0",
   "_inBundle": false,
-  "_integrity": "sha1-62gNSqArUJWOUA3RBV50ancmWCc=",
+  "_integrity": "",
   "_location": "/react-native-activity-recognition",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "react-native-activity-recognition",
+    "type": "git",
+    "raw": "react-native-activity-recognition@git+https://github.com/ifielder/react-native-activity-recognition.git",
     "name": "react-native-activity-recognition",
     "escapedName": "react-native-activity-recognition",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+    "rawSpec": "git+https://github.com/ifielder/react-native-activity-recognition.git",
+    "saveSpec": "git+https://github.com/ifielder/react-native-activity-recognition.git",
+    "fetchSpec": "https://github.com/ifielder/react-native-activity-recognition.git",
+    "gitCommittish": null
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/react-native-activity-recognition/-/react-native-activity-recognition-3.2.0.tgz",
-  "_shasum": "eb680d4aa02b50958e500dd1055e746a77265827",
-  "_spec": "react-native-activity-recognition",
+  "_resolved": "git+https://github.com/ifielder/react-native-activity-recognition.git#18207b9d593ec5bb280b8850010e91b921c43e3e",
+  "_spec": "react-native-activity-recognition@git+https://github.com/ifielder/react-native-activity-recognition.git",
   "_where": "/Users/pasqualesacco/Development/Github/muvrn06",
   "author": {
     "name": "Gert Hengeveld",

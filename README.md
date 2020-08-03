@@ -3,7 +3,8 @@
 [![npm version][npm shield]][npm url]
 
 React Native wrapper for the [Android Activity Recognition API][1] and [CMMotionActivity][3]. It attempts to determine the user activity such as
-driving, walking, running and cycling. Possible detected activities for android are [listed here][2] and for iOS are [listed here][3].
+driving, walking, running and cycling. Possible detected activities for android are [listed here][2] and for iOS are [listed here][3].<br/>
+Updated January 7th and tested with react-native v0.57.5
 
 [1]: https://developers.google.com/android/reference/com/google/android/gms/location/ActivityRecognition
 [2]: https://developers.google.com/android/reference/com/google/android/gms/location/DetectedActivity
@@ -31,7 +32,7 @@ yarn add react-native-activity-recognition
 
 `react-native link react-native-activity-recognition`
 
-IMPORTANT NOTE: You'll need to follow Step 4 for both iOS and Android of manual-linking
+> **IMPORTANT NOTE:** You'll need to follow Step 4 for both iOS and Android of manual-linking
 
 ### Manual
 
@@ -92,7 +93,8 @@ public class MainApplication extends Application implements ReactApplication {
 4. Add `NSMotionUsageDescription` key to your `Info.plist` with strings describing why your app needs this permission
 
 
-## Usage
+## Usage 
+### Class based implementation
 
 ```js
 import ActivityRecognition from 'react-native-activity-recognition'
@@ -115,6 +117,35 @@ ActivityRecognition.start(detectionIntervalMillis)
 // Stop activity detection and remove the listener
 ActivityRecognition.stop()
 this.unsubscribe()
+```
+
+### Hooks based implementation
+
+```js
+import ActivityRecognition from 'react-native-activity-recognition'
+
+...
+
+// Subscribe to updates on mount
+
+  useEffect(() => {
+    ActivityRecognition.subscribe(detectedActivities => {
+      const mostProbableActivity = detectedActivities.sorted[0];
+      console.log(mostProbableActivity);
+    });
+
+// Stop activity detection and remove the listener on unmount
+
+    return ActivityRecognition.stop();
+  });
+
+...
+
+// Start activity detection
+
+const detectionIntervalMillis = 1000
+ActivityRecognition.start(detectionIntervalMillis)
+
 ```
 
 ### Android
