@@ -18,7 +18,7 @@
     return YES;
 }
 
-RCT_EXPORT_MODULE()
+RCT_EXPORT_MODULE();
 
 float _timeout = 1.0;
 
